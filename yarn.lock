@@ -44,10 +44,17 @@
   resolved "http://mirrors.tencent.com/npm/@types%2festree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
-"@types/node@^16.0.0":
+"@types/node@*", "@types/node@^16.0.0":
   version "16.0.0"
   resolved "http://mirrors.tencent.com/npm/@types%2fnode/-/node-16.0.0.tgz#067a6c49dc7a5c2412a505628e26902ae967bf6f"
   integrity sha512-TmCW5HoZ2o2/z2EYi109jLqIaPIi9y/lc2LmDCWzuCi35bcaQ+OtUh6nwBiFK7SOu25FAU5+YKdqFZUwtqGSdg==
+
+"@types/ws@^7.4.6":
+  version "7.4.6"
+  resolved "http://mirrors.tencent.com/npm/@types%2fws/-/ws-7.4.6.tgz#c4320845e43d45a7129bb32905e28781c71c1fff"
+  integrity sha512-ijZ1vzRawI7QoWnTNL8KpHixd2b2XVb9I9HAqI3triPsh1EC0xH0Eg6w2O3TKbDCgiNNlJqfrof6j4T2I+l9vw==
+  dependencies:
+    "@types/node" "*"
 
 arg@^4.1.0:
   version "4.1.3"

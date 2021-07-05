@@ -32,13 +32,7 @@ export const createServer = (port: number): socket  => {
 			console.log('received: %s', message);
 		});
 
-		ws.on('close', event => {
-			console.log(wss.clients.size)
-		})
-
 		ws.send('something');
-
-		console.log(wss.clients.size)
 	});
 
 	wss.on('listening', () => {

@@ -1,5 +1,5 @@
 {
-  "name": "my-server",
+  "name": "nono",
   "version": "0.0.1",
   "description": "lushen test",
   "main": "src/index.js",
@@ -14,6 +14,7 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.2.1",
     "@types/node": "^16.0.0",
+    "@types/ws": "^7.4.6",
     "rollup": "^2.52.7",
     "ts-node": "^10.0.0",
     "tslib": "^2.3.0",
