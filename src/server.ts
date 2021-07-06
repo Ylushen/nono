@@ -1,9 +1,10 @@
 import * as WebSocket from 'ws'
+import {WebSocket as _Websocket} from '@type/ws'
 
 export interface socket { wss: any, close: Function, sendMessage: Function }
 
 export const createServer = (port: number): socket  => {
-	const wss = new WebSocket.Server({
+	const wss: _Websocket = new WebSocket.Server({
 		port: port || 3000,
 		perMessageDeflate: {
 			zlibDeflateOptions: {
@@ -44,7 +45,7 @@ export const createServer = (port: number): socket  => {
 	}
 
 	const sendMessage = (message) => {
-		wss.clients.forEach(ws => {
+		wss.clients.forEach((ws) => {
 			if (ws.isActive === false) return ws.terminate()
 			ws.send(message)
 		})
