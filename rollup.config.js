@@ -55,14 +55,13 @@ export default [
             typescript({
                 target: 'es2018',
                 include: ['src/*'],
+                module: "ES6",
                 baseUrl: path.resolve(__dirname, 'src/env'),
-                moduleResolution: 'node',
                 paths: {
                     'types/*': ['../../types/*']
                 }
             }),
             resolve(),
-            livereload(),
             serve({
                 historyApiFallback: false,
                 port: 3000,

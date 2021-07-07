@@ -10,7 +10,7 @@
     "build": "rollup -c",
     "dev": "nodemon ./dist/index.js",
     "dev-node": "tsc -w --incremental",
-    "dev-client": "rollup --config -w"
+    "dev-client": "rollup -c -w"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.0",

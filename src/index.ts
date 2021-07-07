@@ -1,9 +1,14 @@
 // src/main.js
 import { createServer, socket } from './server';
 
-const { close, sendMessage, wss } : socket = createServer(3000)
+export const SOCKET_TYPE = {
+	UPDATE: 'update',
+	RELOAD: 'reload',
+}
 
-setTimeout(() => {
+const { close, sendMessage, wss } : socket = createServer(3001)
+
+setInterval(() => {
 	sendMessage(JSON.stringify({
 		type: SOCKET_TYPE.UPDATE,
 	}))

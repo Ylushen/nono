@@ -1,10 +1,9 @@
 import * as WebSocket from 'ws'
-import {WebSocket as _Websocket} from '@type/ws'
 
 export interface socket { wss: any, close: Function, sendMessage: Function }
 
 export const createServer = (port: number): socket  => {
-	const wss: _Websocket = new WebSocket.Server({
+	const wss = new WebSocket.Server({
 		port: port || 3000,
 		perMessageDeflate: {
 			zlibDeflateOptions: {
@@ -27,13 +26,12 @@ export const createServer = (port: number): socket  => {
 		}
 	});
 
-
 	wss.on('connection', function connection(ws) {
 		ws.on('message', function incoming(message) {
 			console.log('received: %s', message);
 		});
 
-		ws.send('something');
+		ws.send(JSON.stringify({ type: 'ready', message: 'something'}));
 	});
 
 	wss.on('listening', () => {
